@@ -10,10 +10,11 @@ __pycache__/
 .vscode
 
 #data files
-#.pdf
-#.zip
-#.xlsx
-#.csv
+#$ git rm --cached FILENAME (unstage data files)
+.pdf
+.zip
+.xlsx
+.csv
 
 # Distribution / packaging
 .Python
