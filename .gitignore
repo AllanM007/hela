@@ -10,9 +10,10 @@ __pycache__/
 .vscode
 
 #data files
-.pdf
-.xlsx
-.csv
+#.pdf
+#.zip
+#.xlsx
+#.csv
 
 # Distribution / packaging
 .Python

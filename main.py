@@ -1,14 +1,26 @@
-import pandas as pd
 import matplotlib.pyplot as plt
+import pandas as pd
+import pickle
 
 csv_df = pd.read_csv('mpesa.csv')
 
-#csv_df.dropna(inplace = True) 
+sub ='Loan'
 
-sub ='Pay Bill'
+dotcom = csv_df['Balance'].values
 
-start = 0
+a = 0
 
-df = csv_df['Details'].str.find(sub, start)
+def loans():
+    df = csv_df['Details'].str.find(sub)
 
-print(df)
+    for t in df:
+        if t >= a:
+            print("You took a loan")
+        else:
+            print("Uko Sawa")
+    else:
+        pass
+
+#print(dotcom)
+
+loans()
