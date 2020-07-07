@@ -4,6 +4,8 @@ import pickle
 
 csv_df = pd.read_csv('mpesa.csv')
 
+csv_df.dropna(inplace = True)
+
 sub ='Loan'
 
 dotcom = csv_df['Balance'].values
@@ -21,6 +23,6 @@ def loans():
     else:
         pass
 
-#print(dotcom)
+value = csv_df.query('`Details`.str.endswith("@Repayment")')
 
-loans()
+print(value)
