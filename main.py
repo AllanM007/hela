@@ -1,3 +1,5 @@
+import nltk
+from nltk.tokenize import word_tokenize
 import matplotlib.pyplot as plt
 import pandas as pd
 import pickle
@@ -19,6 +21,11 @@ def loans():
     else:
         pass
 
-deets = csv_df['Details'].to_list()
+nltk.download('punkt')
 
-print(deets)
+csv_df['Details'].to_list()
+
+tokens = csv_df['Details'].apply(word_tokenize)
+
+#tokenized_word=word_tokenize(tokens)
+print(tokens)
