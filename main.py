@@ -1,3 +1,4 @@
+from nltk.tokenize import word_tokenize
 import matplotlib.pyplot as plt
 import pandas as pd
 import pickle
@@ -8,7 +9,7 @@ csv_df.dropna(inplace = True)
 
 sub ='Loan'
 
-dotcom = csv_df['Balance'].values
+dotcom = csv_df["Balance"].values.tolist()
 
 a = 0
 
@@ -23,6 +24,5 @@ def loans():
     else:
         pass
 
-value = csv_df.query('`Details`.str.endswith("@Repayment")')
-
-print(value)
+#print(dotcom)
+loans
