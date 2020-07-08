@@ -1,15 +1,10 @@
-from nltk.tokenize import word_tokenize
 import matplotlib.pyplot as plt
 import pandas as pd
 import pickle
 
 csv_df = pd.read_csv('mpesa.csv')
 
-csv_df.dropna(inplace = True)
-
 sub ='Loan'
-
-dotcom = csv_df["Balance"].values.tolist()
 
 a = 0
 
@@ -24,5 +19,6 @@ def loans():
     else:
         pass
 
-#print(dotcom)
-loans
+deets = csv_df['Details'].to_list()
+
+print(deets)
