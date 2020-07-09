@@ -16,7 +16,7 @@ def loans():
         if t == True:
             print("You took {} loans".format(sum(df)))
         else:
-            print("Uko Sawa")
+            pass
     else:
         pass
 
