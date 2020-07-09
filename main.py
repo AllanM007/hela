@@ -8,7 +8,7 @@ csv_df = pd.read_csv('mpesa.csv')
 #starting point for keyword search
 a = 0
 
-#function to check loan keyword in csv column
+#function to check loan keyword in dataframe column
 def loans():
     df = deets = csv_df['Details'].str.contains("Loan")
 
