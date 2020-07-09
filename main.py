@@ -1,21 +1,20 @@
-import nltk
-from nltk.tokenize import word_tokenize
 import matplotlib.pyplot as plt
 import pandas as pd
 import pickle
+import nltk
 
 csv_df = pd.read_csv('mpesa.csv')
 
-sub ='Loan'
-
+#starting point for keyword search
 a = 0
 
+#function to check loan keyword in csv column
 def loans():
-    df = csv_df['Details'].str.find(sub)
+    df = deets = csv_df['Details'].str.contains("Loan")
 
     for t in df:
-        if t >= a:
-            print("You took a loan")
+        if t == True:
+            print("You took {} loans".format(sum(df)))
         else:
             print("Uko Sawa")
     else:
@@ -23,9 +22,10 @@ def loans():
 
 nltk.download('punkt')
 
-csv_df['Details'].to_list()
+#transform column to list
+deets = csv_df['Details'].to_list()
 
-tokens = csv_df['Details'].apply(word_tokenize)
+#apply tokenization function to column values
+tokens = csv_df.apply(lambda row: nltk.word_tokenize(row['Details']), axis=1)
 
-#tokenized_word=word_tokenize(tokens)
-print(tokens)
+loans()
