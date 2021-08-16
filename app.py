@@ -25,7 +25,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Live
 os.environ['EMAIL_USER'] = 'info@mwarangu.com'
-os.environ['EMAIL_PASSWORD'] = 'mwrng'
+os.environ['EMAIL_PASSWORD'] = ''
 
 mail_settings = {
     "MAIL_SERVER": 'smtp.gmail.com',
